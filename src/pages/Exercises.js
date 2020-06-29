@@ -2,11 +2,14 @@ import React from "react"
 import Welcome from "../Components/Welcome"
 import ExerciseList from "../Components/ExerciseList"
 import AddButton from "../Components/AddButton"
+import Loading from "../Components/Loading"
 
 class Exercises extends React.Component{
 
     state = {
-            data: []
+            data: [],
+            Loading: true,
+            error: null
         }
 
         async componentDidMount(){
@@ -14,16 +17,26 @@ class Exercises extends React.Component{
         }
 
         fetchExercises = async () =>{
-            let res = await fetch('http://localhost:8000/api/exercises/')
-            let data = await res.json()
+            try {
+                let res = await fetch('http://localhost:8000/api/exercises/')
+                let data = await res.json()
 
-            this.setState({
-                data
-            })
+                this.setState({
+                    data, 
+                    Loading: false
+                })     
+            } catch (error) {
+                this.setState({
+                    Loading: false,
+                    error
+                })
+            }
         }
 
 
     render(){
+        if(this.state.Loading)
+                return<Loading/>
         return(
             <React.Fragment>
             <Welcome
