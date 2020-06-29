@@ -4,7 +4,7 @@ import "./styles/AddButton.css"
 
 const AddButton = () =>(
     <div >
-        <a href="exercises/new"></a>
+        <a href="exercise/new"></a>
         <img src={addImg} className="Fitness-Add"/>
     </div>
 )
