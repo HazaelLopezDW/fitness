@@ -4,7 +4,8 @@ import Exercises from "./pages/Exercises"
 
 const App = () => (
     <BrouserRouter>
-        <Route path="" component={Exercises}/>
+        <Route exact path="/exercise" component={Exercises}/>
+        <Route exact path="/exercise/new" component={ExerciseNew}/>
     </BrouserRouter>
 )
 
