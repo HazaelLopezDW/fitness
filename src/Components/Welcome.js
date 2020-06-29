@@ -5,7 +5,7 @@ const Welcome = ({userName}) =>(
     <div className="container">  
         <div className="Fitness-User-Info">
             <h1>Hola {userName}</h1>
-            <p>Tienes que confiar en Dios Hazael!</p>
+            <p>Tienes que confiar en Dios {userName}!</p>
         </div>        
     </div>
 )
