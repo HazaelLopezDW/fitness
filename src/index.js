@@ -8,7 +8,9 @@ const container = document.getElementById('root')
 
 ReactDOM.render(
                 <React.Fragment>
-                  <Welcome/>
+                  <Welcome
+                    userName = "Hazael López Díaz"
+                  />
                   <Card
                       title = "Es texto no Importa"
                       description = "Porque consumiremos recursos de una API"
