@@ -9,7 +9,6 @@ class ExerciseForm extends React.Component{
         console.log(this.state)
     }
 
-
     render(){
 
         const {onChange, form} = this.props
