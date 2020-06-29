@@ -41,6 +41,7 @@ class Exercises extends React.Component{
             />
             {this.state.data.map((exercise) =>{
                 return(
+                    <div>
                     <Card
                         title = {exercise.title}
                         description = {exercise.description}
@@ -48,6 +49,8 @@ class Exercises extends React.Component{
                         leftColor = {exercise.leftColor}
                         rightColor = {exercise.rightColor}
                 />
+                <br/>
+                </div>
                 )
             })}
           </React.Fragment>
