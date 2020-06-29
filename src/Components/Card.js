@@ -1,4 +1,5 @@
 import React from "react"
+import exerciseImg from "../images/exercise.png"
 
 class Card extends React.Component{
 
@@ -6,7 +7,7 @@ class Card extends React.Component{
         return(
             <div>
                 <div>
-                    <img />
+                    <img src={exerciseImg}/>
                 </div>
                 <div>
                     <h1>Es texto no Importa</h1>
