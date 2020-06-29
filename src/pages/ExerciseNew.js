@@ -2,9 +2,16 @@ import React from "react"
 import Exercises from "./Exercises"
 
 class Exercise extends React.Component{
+
+    handleClick = ev =>(
+        console.log(this)
+    ) 
+
     render(){
         return(
-            <h1>Hola mundo!!!!</h1>
+            <button onClick={this.handleClick}>
+                Send....
+            </button>
         )
     }
 }
