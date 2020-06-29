@@ -3,6 +3,7 @@ import Welcome from "../Components/Welcome"
 import ExerciseList from "../Components/ExerciseList"
 import AddButton from "../Components/AddButton"
 import Loading from "../Components/Loading"
+import Error from "../pages/500"
 
 class Exercises extends React.Component{
 
@@ -36,7 +37,9 @@ class Exercises extends React.Component{
 
     render(){
         if(this.state.Loading)
-                return<Loading/>
+            return<Loading/>
+        if(this.state.error)
+            return<Error/>
         return(
             <React.Fragment>
             <Welcome
