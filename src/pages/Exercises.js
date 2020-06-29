@@ -1,6 +1,6 @@
 import React from "react"
-import Card from "../Components/Card"
 import Welcome from "../Components/Welcome"
+import ExerciseList from "../Components/ExerciseList"
 
 class Exercises extends React.Component{
 
@@ -39,20 +39,9 @@ class Exercises extends React.Component{
             <Welcome
               userName = "Hazael López"
             />
-            {this.state.data.map((exercise) =>{
-                return(
-                    <div>
-                    <Card
-                        title = {exercise.title}
-                        description = {exercise.description}
-                        img = {exercise.img}
-                        leftColor = {exercise.leftColor}
-                        rightColor = {exercise.rightColor}
-                />
-                <br/>
-                </div>
-                )
-            })}
+            <ExerciseList
+                exercises = {this.state.data}
+            />
           </React.Fragment>
         )
     }
