@@ -1,12 +1,12 @@
 import React from "react"
-import { BrouserRouter, Route, Switch} from "react-router-dom"
+import { BrowserRouter, Route, Switch} from "react-router-dom"
 import Exercises from "./pages/Exercises"
 
 const App = () => (
-    <BrouserRouter>
+    <BrowserRouter>
         <Route exact path="/exercise" component={Exercises}/>
         <Route exact path="/exercise/new" component={ExerciseNew}/>
-    </BrouserRouter>
+    </BrowserRouter>
 )
 
 export default App
