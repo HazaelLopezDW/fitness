@@ -20,68 +20,26 @@ class Exercise extends React.Component{
     render(){
         return(
             <div className="container">
-            <form 
-                onSubmit={this.handleSubmit}
-            >
+            <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                    <input 
-                        type="text" 
-                        className="form-control" 
-                        placeholder="title" 
-                        name="title"
-                        onChange={this.handleChange}
-                        value={this.state.title}
-                    />
+                    <input type="text" className="form-control" placeholder="title" name="title"onChange={this.handleChange} value={this.state.title} />
                 </div>
                 <div className="form-group">
-                    <input 
-                        type="text" 
-                        className="form-control" 
-                        placeholder="description" 
-                        name="description"
-                        onChange={this.handleChange}
-                        value={this.state.description}
-                    />
+                    <input type="text" className="form-control" placeholder="description" name="description" onChange={this.handleChange} value={this.state.description} />
                 </div>
                 <div className="form-group">
-                    <input 
-                        type="text" 
-                        className="form-control" 
-                        placeholder="img" 
-                        name="img"
-                        onChange={this.handleChange}
-                        value={this.state.img}
-                    />
+                    <input type="text" className="form-control" placeholder="img" name="img" onChange={this.handleChange} value={this.state.img} />
                 </div>
                 <div className="form-row">
                     <div className="col">
-                        <input 
-                            type="text" 
-                            className="form-control" 
-                            placeholder="leftColor" 
-                            name="leftColor"
-                            onChange={this.handleChange}
-                            value={this.state.leftColor}
-                        />
+                        <input type="text" className="form-control" placeholder="leftColor" name="leftColor" onChange={this.handleChange} value={this.state.leftColor} />
                     </div>
                     <div className="col">
-                        <input 
-                            type="text" 
-                            className="form-control"
-                            placeholder="rightColor" 
-                            name="rightColor"
-                            onChange={this.handleChange}
-                            value={this.state.rightColor}
-                        />    
+                        <input type="text" className="form-control" placeholder="rightColor" name="rightColor" onChange={this.handleChange} value={this.state.rightColor} />    
                     </div>
                 </div>
                 <br/>
-                <button 
-                    type="submit" 
-                    className="btn btn-primary"
-                >
-                    Submit
-                </button>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
         )
