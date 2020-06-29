@@ -1,6 +1,5 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import Exercises from "./pages/Exercises"
 import App from "./Components/App"
 
 // Creamos nuestro contenedor
