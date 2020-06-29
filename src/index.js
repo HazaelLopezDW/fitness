@@ -1,9 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import Card from "./Components/Card"
 
-// Creamos un Contenedor y un componente para nuestra aplicacion 
-
-const component = <h1> hola mundo</h1>
+// Creamos nuestro contenedor
 const container = document.getElementById('root')
 
-ReactDOM.render(component, container)
+ReactDOM.render(<Card/>, container)
