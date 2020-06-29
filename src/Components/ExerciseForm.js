@@ -1,5 +1,5 @@
 import React from "react"
-import Exercises from "./Exercises"
+import Exercises from "../pages/Exercises"
 
 class ExerciseForm extends React.Component{
 
