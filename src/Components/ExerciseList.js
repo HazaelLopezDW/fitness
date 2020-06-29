@@ -5,17 +5,14 @@ const ExerciseList = ({exercises}) =>(
     <div>
         {exercises.map((exercise) =>{
             return(
-                <div>
-                    <Card
-                        key={exercise.id}
-                        title = {exercise.title}
-                        description = {exercise.description}
-                        img = {exercise.img}
-                        leftColor = {exercise.leftColor}
-                        rightColor = {exercise.rightColor}
-                    />
-                <br/>
-                </div>
+                <Card
+                    key = {exercise.id}
+                    title = {exercise.title}
+                    description = {exercise.description}
+                    img = {exercise.img}
+                    leftColor = {exercise.leftColor}
+                    rightColor = {exercise.rightColor}
+                />
             )
         })}
     </div>
