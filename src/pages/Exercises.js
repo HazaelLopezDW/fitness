@@ -9,6 +9,18 @@ class Exercises extends React.Component{
             data: []
         }
 
+        async componentDidMount(){
+            await this.fetchExercises()
+        }
+
+        fetchExercises = async () =>{
+            let res = await fetch('http://localhost:8000/api/exercises/')
+            let data = await res.json()
+
+            console.log(data)
+        }
+
+
     render(){
         return(
             <React.Fragment>
