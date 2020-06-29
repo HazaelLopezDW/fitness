@@ -7,6 +7,7 @@ const ExerciseList = ({exercises}) =>(
             return(
                 <div>
                     <Card
+                        key={exercise.id}
                         title = {exercise.title}
                         description = {exercise.description}
                         img = {exercise.img}
