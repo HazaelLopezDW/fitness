@@ -11,10 +11,16 @@ class ExerciseNew extends React.Component{
             img: "",
             leftColor: "",
             rightColor: ""
-        }
+        }, 
+        error: null,
+        loading: false
     }
 
     handleSubmit = async ev =>{
+        this.setState({
+            loading: true
+        })
+
         ev.preventDefault()
         try {
             let config = {
@@ -29,9 +35,14 @@ class ExerciseNew extends React.Component{
             let res = await fetch('http://localhost:8000/api/exercises/', config)
             let json = await res.json();
 
-            console.log(json)
+            this.setState({
+                loading: false
+            })
         } catch (error) {
-            
+            this.setState({
+                loading: false,
+                error
+            })
         }
         console.log(this.state)
     }
