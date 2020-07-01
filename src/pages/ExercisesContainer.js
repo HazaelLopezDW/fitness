@@ -9,6 +9,10 @@ const ExercisesContainer = () =>{
     const [ loading, setLoading ] = useState(false)
     const [ error, setError ] = useState(null)
 
+    useEffect( () =>{
+
+    }, [])
+
     if(loading)
         return<Loading/>
     if(error)
