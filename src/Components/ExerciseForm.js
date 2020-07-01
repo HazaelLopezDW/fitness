@@ -1,14 +1,7 @@
 import React from "react"
-import Exercises from "../pages/ExercisesContainer"
 
-class ExerciseForm extends React.Component{
-
-    render(){
-
-        const {onChange, onSubmit, form} = this.props
-
-        return(
-            <React.Fragment>
+const ExerciseForm = ({onChange, onSubmit, form}) =>(
+    <React.Fragment>
                 <div className="container">
                     <form onSubmit={onSubmit}>
                         <div className="form-group">
@@ -33,8 +26,6 @@ class ExerciseForm extends React.Component{
                     </form>
                 </div>
             </React.Fragment>
-        )
-    }
-}
+)
 
 export default ExerciseForm
