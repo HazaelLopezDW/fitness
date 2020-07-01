@@ -3,7 +3,7 @@ import Welcome from "../Components/Welcome"
 import ExerciseList from "../Components/ExerciseList"
 import AddButton from "../Components/AddButton"
 import Loading from "../Components/Loading"
-import Error from "../pages/500"
+import Error from "./500"
 
 class Exercises extends React.Component{
 
