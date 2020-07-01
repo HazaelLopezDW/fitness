@@ -5,13 +5,15 @@ import ExerciseNew from "../pages/ExerciseNew"
 import NotFount from "../pages/404"
 
 const App = () => (
-    <BrowserRouter>
-        <Switch>
-            <Route exact path="/exercise" component={Exercises}/>
-            <Route exact path="/exercise/new" component={ExerciseNew}/>
-            <Route component={NotFount}/>
-        </Switch>
-    </BrowserRouter>
+    <React.Fragment>
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/exercise" component={Exercises}/>
+                <Route exact path="/exercise/new" component={ExerciseNew}/>
+                <Route component={NotFount}/>
+            </Switch>
+        </BrowserRouter>
+    </React.Fragment>
 )
 
 export default App

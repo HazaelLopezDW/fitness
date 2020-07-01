@@ -65,20 +65,22 @@ class ExerciseNew extends React.Component{
         if(this.state.error)
             return<FatalError/>
         return(
-            <div className="row">
-                <div className="col-sm">
-                    <Card
-                        {...this.state.form}
-                    />
+            <React.Fragment>
+                <div className="row">
+                    <div className="col-sm">
+                        <Card
+                            {...this.state.form}
+                        />
+                    </div>
+                    <div className="col-sm">
+                        <ExerciseForm
+                            onChange={this.handleChange}
+                            onSubmit={this.handleSubmit}
+                            form={this.state.form}
+                        />
+                    </div>
                 </div>
-                <div className="col-sm">
-                    <ExerciseForm
-                        onChange={this.handleChange}
-                        onSubmit={this.handleSubmit}
-                        form={this.state.form}
-                    />
-                </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
