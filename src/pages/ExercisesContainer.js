@@ -10,7 +10,23 @@ const ExercisesContainer = () =>{
     const [ error, setError ] = useState(null)
 
     useEffect( () =>{
+        const fetchExercises = async () =>{
+            try {
+                let res = await fetch('http://localhost:8000/api/exercises/')
+                let data = await res.json()
 
+                this.setState({
+                    data, 
+                    Loading: false
+                })     
+            } catch (error) {
+                this.setState({
+                    Loading: false,
+                    error
+                })
+            }
+        }
+        fetchExercises()
     }, [])
 
     if(loading)
