@@ -1,11 +1,9 @@
 import React from "react"
-import Welcome from "../Components/Welcome"
-import ExerciseList from "../Components/ExerciseList"
-import AddButton from "../Components/AddButton"
+import Exercises from "./Exercises"
 import Loading from "../Components/Loading"
 import Error from "./500"
 
-class Exercises extends React.Component{
+class ExercisesContainer extends React.Component{
 
     state = {
             data: [],
@@ -42,16 +40,12 @@ class Exercises extends React.Component{
             return<Error/>
         return(
         <React.Fragment>
-            <Welcome
-              userName = "Hazael López"
+            <Exercises
+                data={this.state.data}
             />
-            <ExerciseList
-                exercises = {this.state.data}
-            />
-            <AddButton/>
         </React.Fragment>
         )
     }
 }
 
-export default Exercises
+export default ExercisesContainer
