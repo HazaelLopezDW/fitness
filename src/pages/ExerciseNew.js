@@ -1,88 +1,26 @@
 import React from "react"
 import ExerciseForm from "../Components/ExerciseForm"
 import Card from "../Components/Card"
-import Error from "../pages/500"
-import FatalError from "../pages/500"
 
-class ExerciseNew extends React.Component{
-
-    state = {
-        form: {
-            title: "",
-            description: "",
-            img: "",
-            leftColor: "",
-            rightColor: ""
-        }, 
-        error: null,
-        loading: false
-    }
-
-    handleSubmit = async ev =>{
-        this.setState({
-            loading: true
-        })
-
-        ev.preventDefault()
-        try {
-            let config = {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(this.state.form)
-            }
-
-            let res = await fetch('http://localhost:8000/api/exercises/', config)
-            let json = await res.json();
-
-            this.setState({
-                loading: false
-            })
-
-            this.props.history.push('/exercise')
-        } catch (error) {
-            this.setState({
-                loading: false,
-                error
-            })
-        }
-        console.log(this.state)
-    }
-
-    handleChange = ev =>{
-        this.setState({
-            form: {
-                ...this.state.form,
-                [ev.target.name]: ev.target.value
-            }
-        })
-
-    }
-
-    render(){
-        if(this.state.error)
-            return<FatalError/>
-        return(
-            <React.Fragment>
+const ExerciseNew = ({form, onChange, onSubmit}) =>{
+    return(
+        <React.Fragment>
                 <div className="row">
                     <div className="col-sm">
                         <Card
-                            {...this.state.form}
+                            {...form}
                         />
                     </div>
                     <div className="col-sm">
                         <ExerciseForm
-                            onChange={this.handleChange}
-                            onSubmit={this.handleSubmit}
-                            form={this.state.form}
+                            onChange={onChange}
+                            onSubmit={onSubmit}
+                            form={form}
                         />
                     </div>
                 </div>
-            </React.Fragment>
-        )
-    }
+        </React.Fragment>
+    )        
 }
 
 export default ExerciseNew
