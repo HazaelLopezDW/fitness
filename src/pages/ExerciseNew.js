@@ -38,6 +38,8 @@ class ExerciseNew extends React.Component{
             this.setState({
                 loading: false
             })
+
+            this.props.history.push('/exercise')
         } catch (error) {
             this.setState({
                 loading: false,
