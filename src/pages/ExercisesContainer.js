@@ -1,5 +1,5 @@
 import React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Exercises from "./Exercises"
 import Loading from "../Components/Loading"
 import Error from "./500"
