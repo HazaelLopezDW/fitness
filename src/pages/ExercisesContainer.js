@@ -3,7 +3,7 @@ import Exercises from "./Exercises"
 import Loading from "../Components/Loading"
 import Error from "./500"
 
-class ExercisesContainer extends React.Component{
+/*class ExercisesContainer extends React.Component{
 
     state = {
             data: [],
@@ -46,6 +46,6 @@ class ExercisesContainer extends React.Component{
         </React.Fragment>
         )
     }
-}
+}*/
 
 export default ExercisesContainer
