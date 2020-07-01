@@ -1,6 +1,8 @@
 import React from "react"
 import ExerciseForm from "../Components/ExerciseForm"
 import Card from "../Components/Card"
+import Error from "../pages/500"
+import FatalError from "../pages/500"
 
 class ExerciseNew extends React.Component{
 
@@ -60,6 +62,8 @@ class ExerciseNew extends React.Component{
     }
 
     render(){
+        if(this.state.error)
+            return<FatalError/>
         return(
             <div className="row">
                 <div className="col-sm">
