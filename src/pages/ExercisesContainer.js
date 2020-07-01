@@ -15,15 +15,12 @@ const ExercisesContainer = () =>{
                 let res = await fetch('http://localhost:8000/api/exercises/')
                 let data = await res.json()
 
-                this.setState({
-                    data, 
-                    Loading: false
-                })     
+                setData(data)
+                setLoading(false)
+
             } catch (error) {
-                this.setState({
-                    Loading: false,
-                    error
-                })
+                setLoading(false)
+                setError(error)
             }
         }
         fetchExercises()
