@@ -47,7 +47,6 @@ class ExerciseNewContainer extends React.Component{
                 error
             })
         }
-        console.log(this.state)
     }
 
     handleChange = ev =>{
@@ -65,7 +64,7 @@ class ExerciseNewContainer extends React.Component{
             return<Loading/>
         if(this.state.error)
             return<FatalError/>
-            
+
         return(
             <ExerciseNew
                 form={this.state.form}
