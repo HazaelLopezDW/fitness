@@ -5,7 +5,6 @@ import ExerciseNew from "../pages/ExerciseNew"
 import NotFount from "../pages/404"
 
 const App = () => (
-    <React.Fragment>
         <BrowserRouter>
             <Switch>
                 <Route exact path="/exercise" component={Exercises}/>
@@ -13,7 +12,6 @@ const App = () => (
                 <Route component={NotFount}/>
             </Switch>
         </BrowserRouter>
-    </React.Fragment>
 )
 
 export default App
